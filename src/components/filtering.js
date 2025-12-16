@@ -1,4 +1,4 @@
-
+import {createComparison, defaultRules} from "../lib/compare.js"
 // @todo: #4.3 — настроить компаратор
 const compare = createComparison(defaultRules);
 
@@ -22,7 +22,7 @@ export function initFiltering(elements) {
         }; 
 
         // @todo: #4.5 — отфильтровать данные, используя компаратор
-        data.filter(row => compare(row, state));
+        
 
         const filter = {};
         Object.keys(elements).forEach(key => {
