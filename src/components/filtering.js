@@ -10,7 +10,7 @@ export function initFiltering(elements, indexes) {
         elements[elementName].append(                    // в каждый элемент добавляем опции
             ...Object.values(indexes[elementName])        // формируем массив имён, значений опций
                       .map(name => {                        // используйте name как значение и текстовое содержимое
-                        const optionTag = createElement('option')
+                        const optionTag = document.createElement('option')
                         optionTag.textContent = name
                         optionTag.value = name                                // @todo: создать и вернуть тег опции
                         return optionTag
